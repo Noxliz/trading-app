@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Trading App</title>
+    <link rel="stylesheet" href="style-updated-temp.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Trading Learning App</h1>
+            <div class="asset-selector">
+                <select id="asset-type">
+                    <option value="stocks">Stocks</option>
+                    <option value="crypto">Cryptocurrencies</option>
+                </select>
+                <select id="asset-select"></select>
+            </div>
+        </header>
+
+        <main>
+            <div class="price-display">
+                <div class="current-price">
+                    <span id="price">--</span>
+                    <span id="price-change" class="neutral">--</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="price-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="trade-panel">
+                <input type="number" id="trade-amount" min="0" step="0.01" placeholder="Amount">
+                <div class="trade-buttons">
+                    <button id="buy-btn">Buy</button>
+                    <button id="sell-btn">Sell</button>
+                </div>
+            </div>
+
+            <div class="dashboard">
+                <div class="portfolio">
+                    <h2>Votre Portefeuille</h2>
+                    <div id="portfolio-items"></div>
+                </div>
+                
+                <div class="analytics">
+                    <h2>Analytiques</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Performance</h3>
+                            <canvas id="performance-chart"></canvas>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Risque</h3>
+                            <div id="risk-meter"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="data.js"></script>
+    <script src="app-updated-v2.js"></script>
+</body>
+</html>
